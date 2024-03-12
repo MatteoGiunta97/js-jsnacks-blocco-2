@@ -10,16 +10,21 @@ const firstWord = prompt('inserisci una parola');
 const secondWord = prompt('inserisci una seconda parola');
 
 // Controllo il numero di lettere di ogni parola
-for (let index = 0; index < firstWord.length; index++) {
-    
-    fWordLength = firstWord[index];
-    //console.log(fWordLength)
-}
+const firstWordLng = firstWord.length;
 
-for (let index = 0; index < secondWord.length; index++) {
-    
-    sWordLength = secondWord[index];
-    //console.log(sWordLength)
-}
+const secondWordLng = secondWord.length;
 
-// Stampo prima la parole che contiene meno lettere e poi quella con più lettere
+
+// stampo prima la parola più corta, poi la parola più lunga
+let prntWord ;
+
+if (firstWordLng > secondWordLng) {
+
+    prntWord = secondWord +'-'+ firstWord;
+
+}else {
+
+    prntWord = firstWord +'-'+ secondWord;
+}
+console.log(prntWord)
+
